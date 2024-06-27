@@ -22,6 +22,7 @@ st.subheader("Visualisasi data yang akan digunakan")
 fig = plt.figure(figsize=(12,6))
 plt.plot(df)
 st.pyplot(fig)
+plt.clf()
 
 st.subheader("Moving Average")
 ma100 = df.rolling(100).mean()
@@ -29,6 +30,7 @@ plt.plot(df)
 plt.plot(ma100, "r")
 plt.title("Meta Stock Moving Average")
 st.pyplot(fig)
+plt.clf()
 
 # Membuat training data dan test data
 
@@ -81,3 +83,4 @@ plt.plot(converted_dates, testPlot, 'g', label='Test')
 plt.plot(converted_dates, testPredictPlot, 'r', label="Predicted")
 plt.legend()
 st.pyplot(fig)
+plt.clf()

@@ -78,6 +78,7 @@ testPredictPlot[len(y_train)+(100)*2 + 1 : len(df) - 1,:] = scaled_test_predict
 
 converted_dates = list(map(datetime.datetime.strptime, data.Date, len(data.Date)*['%Y-%m-%d']))
 
+st.subheader("Hasil prediksi")
 plt.plot(converted_dates, df, 'b', label='Original')
 plt.plot(converted_dates, testPlot, 'g', label='Test')
 plt.plot(converted_dates, testPredictPlot, 'r', label="Predicted")
